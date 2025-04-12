@@ -1,0 +1,88 @@
+
+#corporate .container{
+    display: grid;
+    grid-template-columns: 400px auto;
+    gap: 10rem;
+}
+#corporate .column1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+#corporate .column1-subcontainer{
+    margin: 5px;
+    background: var(--color-ui-primary);
+    border-radius: var(--radius-2);
+    transition: var(--transition);
+}
+#corporate .column1-subcontainer:hover{
+    background: var(--color-ui-variant);
+    
+}
+#corporate .column1-subcontainer p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+#corporate .column2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#corporate .column2 .values-container1 .sub-title{
+    text-align: center;
+}
+#corporate .column2 .values-container2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+    
+}
+#corporate .column2 .values-container2 .values{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 10px;
+    background: var(--color-ui-primary);
+    border-radius: var(--radius-2);
+    transition: var(--transition);
+}
+
+#corporate .column2 .values-container2 .values:hover{
+    background: var(--color-ui-variant);
+}
+#corporate .column2 .values-container2 .values .icon-container{
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+#corporate .column2 .values-container2 .values:hover .icon-container{
+    transform: scale(1.2);
+}
+
+/* Responsive for 1030px */
+@media (max-width: 1030px) {
+    #corporate .container {
+        grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+        gap: 2rem; /* Reduce the gap */
+    }
+
+    #corporate .column1,
+    #corporate .column2 {
+        width: 100%; /* Ensure proper spacing */
+    }
+}
+
+/* Responsive for 900px */
+@media (max-width: 900px) {
+    #corporate .container {
+        grid-template-columns: 1fr; /* Switch to single-column layout */
+        gap: 2rem; /* Adjust the gap */
+    }
+
+    #corporate .column1,
+    #corporate .column2 {
+        justify-content: flex-start; /* Optional: Adjust alignment for vertical flow */
+    }
+}
