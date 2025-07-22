@@ -1,0 +1,1 @@
+.logo{display:flex;align-items:center;gap:5px;margin-left:.5rem}.logo .icon_container img{height:5rem;width:5rem}.logo .icon_container,.logo .title{font-size:1.5rem;font-weight:600}.logo .title{font-size:1.5rem;color:var(--color-success);font-weight:600;margin-left:1.5rem}.logo .g-text{display:block;color:var(--color-primary)}
