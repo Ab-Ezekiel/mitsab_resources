@@ -1,7 +1,8 @@
-import React from 'react'
-import "./ServiceCard.css"
+// ServiceCard.js
+import React from 'react';
+import './ServiceCard.css';
 
-const ServiceCard = ({ id, name, icon, description }) => {
+const ServiceCard = ({ name, icon, description }) => {
   return (
     <div className="service_card">
       <div className="icon_container">{icon}</div>
@@ -11,4 +12,4 @@ const ServiceCard = ({ id, name, icon, description }) => {
   );
 };
 
-export default ServiceCard
+export default ServiceCard;

@@ -68,7 +68,7 @@ const Testimonies = () => {
                 </div>
                 <div className="details">
                   <h3 className="name">{list.name}</h3>
-                  <small className="text_muted">CEO of Mitsab</small>
+                  <small className="text_muted">{list.position}</small>
                 </div>
               </div>
               <p className="text_muted content">{list.review}</p>

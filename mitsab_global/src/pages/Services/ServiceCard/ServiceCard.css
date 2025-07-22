@@ -5,6 +5,8 @@
     border: solid 2px transparent;
     transition: var(--transition);
     box-shadow: var(--shadow-1);
+   
+   
 }
 .service_card:hover{
     border-color: var(--color-primary);

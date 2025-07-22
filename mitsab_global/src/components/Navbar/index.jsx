@@ -7,6 +7,7 @@ import Logo from "../Logo";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
+
 const navTabs = [
   { id: "home", name: "Home", path: "/" },
   { id: "about", name: "About Us", path: "/about" },
@@ -14,27 +15,42 @@ const navTabs = [
     id: "services", 
     name: "Services", 
     path: "/services",
-    dropdown: [
+    dropdown1: [
       { id: "construction-services", name: "Construction Services", path: "/services/construction-services" },
       { id: "project-and-program-management-services", name: "Project and Program Management Services", path: "/services/project-and-program-management-services" },
-      { id: "manpower-supply-and-management-Services", name: "Manpower Supply and Management Services", path: "/services/manpower-supply-and-management-Services" },
+      { id: "manpower-supply-and-management-services", name: "Manpower Supply and Management Services", path: "/services/manpower-supply-and-management-services" },
       { id: "renovation-and-remodeling", name: "Renovation and Remodeling", path: "/services/renovation-and-remodeling" },
       { id: "minor-civil-maintenance-services", name: "Minor Civil Maintenance Services", path: "/services/minor-civil-maintenance-services" },
-      { id: "specialty-construction-services", name: "Specialty Construction Services", path: "/services/specialty-construction-services" },
+      { id: "welding-and-fabrication-services", name: "Welding and Fabrication Services", path: "/services/welding-and-fabrication-services" },
       { id: "earthwork-landscaping", name: "Earthwork Landscaping", path: "/services/earthwork-landscaping" },
       { id: "borehole-drilling-services", name: "Borehole Drilling Services", path: "/services/borehole-drilling-services" },
-      { id: "pre-construction services", name: "Pre-Construction Services", path: "/services/pre-construction services" },
+      { id: "pre-construction-services", name: "Pre-Construction Services", path: "/services/pre-construction-services" },
+      { id: "cat-engine-repairs-and-maintenance", name: "CAT Engine Repairs & Maintenance", path: "/services/cat-engine-repairs-and-maintenance" },
+      { id: "marine-services", name: "Marine Transportation Services", path: "/services/marine-services" },
+      
+  
     ],
   },
   { id: "project", name: "Projects", path: "/project" },
-  
+  { 
+    id: "subsidiaries", 
+    name: "Our Subsidiaries", 
+    path: "/" ,
+    dropdown2: [
+      { id: "subsidiary-1", name: "Tisab resources", path: "http://localhost:5174/"},
+      { id: "subsidiary-2", name: "De Absareal Fireservices", path: "http://localhost:5175/"},
+      { id: "subsidiary-3", name: "Mitsab Security and Surveillance", path: "http://localhost:5176/"},
+    ]
+  }
 ];
+
 
 const Navbar = () => {
   const container = useRef(null);
   const [open, setOpen] = useState(false);
   const [visible, setVisible] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [openDropdownId, setOpenDropdownId] = useState(null);
+
 
   const handleScroll = () => {
     setVisible(window.scrollY > 145);
@@ -68,19 +84,19 @@ const Navbar = () => {
         </div>
         {navTabs.map((tab, index) => (
           <div key={index} className="nav_tab">
-            {tab.dropdown ? (
+            {tab.dropdown1 ? (
               <div
                 className="dropdown"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
+                onMouseEnter={() => setOpenDropdownId(tab.id)}
+                onMouseLeave={() => setOpenDropdownId(null)}
               >
                 <span className="tab">
-                  {tab.name} 
-                  <FaChevronDown className={`dropdown_icon ${dropdownOpen ? "open" : ""}`} />
+                  {tab.name}
+                  <FaChevronDown className={`dropdown_icon ${openDropdownId === tab.id ? "open" : ""}`} />
                 </span>
-                {dropdownOpen && (
+                {openDropdownId === tab.id && (
                   <ul className="dropdown_menu">
-                    {tab.dropdown.map((item) => (
+                    {tab.dropdown1.map((item) => (
                       <li key={item.id}>
                         <NavLink
                           to={item.path}
@@ -94,6 +110,36 @@ const Navbar = () => {
                   </ul>
                 )}
               </div>
+
+            ) : tab.dropdown2 ? (
+              <div
+                className="dropdown"
+                onMouseEnter={() => setOpenDropdownId(tab.id)}
+                onMouseLeave={() => setOpenDropdownId(null)}
+              >
+                <span className="tab">
+                  {tab.name}
+                  <FaChevronDown className={`dropdown_icon ${openDropdownId === tab.id ? "open" : ""}`} />
+                </span>
+                {openDropdownId === tab.id && (
+                  <ul className="dropdown_menu">
+                    {tab.dropdown2.map((item) => (
+                      <li key={item.id}>
+                        <a
+                          href={item.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="dropdown_item"
+                          onClick={() => setOpen(false)}
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+
             ) : (
               <NavLink
                 to={tab.path}
@@ -103,6 +149,7 @@ const Navbar = () => {
                 <p>{tab.name}</p>
               </NavLink>
             )}
+
           </div>
         ))}
       </div>

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import "./Services.css"
-import { services } from "../../data"
+import { services,servicesDetail } from "../../data"
 import ServiceCard from './ServiceCard'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -44,15 +44,15 @@ const Services = () => {
         </div>
         <div className="services_container">
           {services.map((service) => (
-            <Link key={service.id} to={`/services/${service.id}`}>
+            <Link key={service.id} to={`/services/${service.detailId}`}>
               <ServiceCard
-                id={service.id}
                 icon={service.icon}
                 name={service.name}
                 description={service.description}
               />
             </Link>
-          ))}
+            )
+          )}
 
         </div>
       </div>

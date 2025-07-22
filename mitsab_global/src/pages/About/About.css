@@ -4,20 +4,17 @@
     opacity: 1;
     
 }
-
 .about-container{
    
     display: grid;
     grid-template-columns: 400px auto;
     gap: 30px;
-   
 }
 #about .company_photo{
     border-radius: var(--radius-2);
     overflow: hidden;
     max-width: 400px;
     margin: auto;
-    
 }
 #about .company_photo:hover img{
     transform: scale(1.2);

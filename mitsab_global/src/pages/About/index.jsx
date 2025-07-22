@@ -1,14 +1,16 @@
 import React, { useRef } from 'react'
 import "./About.css"
-import { about_image, building_1, building_2, building_3 } from "../../assets"
+import { about_image, building_1, building_2, building_3, mgt2, soak_away_pit2, storage_tank_base, welding6 } from "../../assets"
 import { FaCheck } from 'react-icons/fa6'
 import { Link } from 'react-scroll'
+import { NavLink } from 'react-router-dom'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Teams from './Teams'
 import Corporate from './Corporate'
 import Achievement from './Achievement'
+import GetQuote from '../GetQuote'
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -60,7 +62,7 @@ const About = () => {
     <section id='about' ref={container}>
       <div className="container about-container">
         <div className="column company_photo">
-          <img src={about_image} alt="Mitsab" />
+          <img src={mgt2} alt="Mitsab" />
         </div>
         <div className="column">
           <h3 className='title'>
@@ -69,24 +71,37 @@ const About = () => {
           <h3 className='sub_title'>Realizing visions through fundamental focus.</h3>
           <div className="company_media_container">
             <div className="box">
-              <img src={building_1} alt="" />
+              <img src={storage_tank_base} alt="" />
             </div>
             <div className="box">
-              <img src={building_2} alt="" />
+              <img src={welding6} alt="" />
             </div>
             <div className="box">
-              <img src={building_3} alt="" />
+              <img src={soak_away_pit2} alt="" />
             </div>
           </div>
           <div className="para">
             <p className="text_muted description">
-              The objective of MIREGL is to provide our clients with a more assured at it best experience when we are chosen and given the opportunity to execute any of their projects. 
-              Our emphasis is on clear communication and follow-through procedures to ensures that client’s objectives are top priority in the planning and execution of all our processes.
-
-              As expected, we have built successful business relationship through sustainable projects and services that has contributed to the growth of the Nigerian economy.
+              MITSAB RESOURCES GLOBAL LIMITED (MIREGL) is a registered Nigerian company with RC 1667132. Established under the Companies and Allied Matters Act of 1990 on March 11, 2020, 
+              MIREGL operates as a multi-disciplinary limited liability company focused on delivering sustainable projects and high-quality services across the construction, exploration, 
+              and environmental sectors. Our operations are guided by a strong local content philosophy and a commitment to excellence in service delivery.
             </p>
             <p className="text_muted description">
-              As expected, we have built successful business relationship through sustainable projects and services that has contributed to the growth of the Nigerian economy.
+              As the parent company, MIREGL oversees and manages a growing family of specialized subsidiaries — including T-SAB RESOURCES (focused on oil and gas), MITSAB Security Surveillance, 
+              and MITSAB Fire Services — all working collaboratively to extend our technical expertise and broaden our impact across key industries.
+            </p>
+            <p className="text_muted description">
+              Over the years, MIREGL has built a solid reputation for excellence by executing challenging projects and providing innovative design-build solutions, project management services, 
+              and related engineering works. Our experienced team of professionals brings deep industry knowledge and a results-driven approach to every engagement.
+            </p>
+            <p className="text_muted description">
+              At MIREGL, our objective is to give every client a seamless and professional project experience. We prioritize clear communication, strategic planning, and precise execution to 
+              ensure that our clients' goals remain central to every phase of the project lifecycle.
+            </p>
+            <p className="text_muted description">
+              Through our commitment to sustainable development and technical innovation, we continue to build strong, value-driven relationships while 
+              contributing meaningfully to Nigeria’s economic growth.
+
             </p>
           </div>
           <div className="group" >
@@ -131,8 +146,8 @@ const About = () => {
             </div>
           </div>
           <div className="buttons_container">
-            <Link to="project" smooth={true} className="btn">Explore</Link>
-            <Link to="contact" smooth={true} className="btn btn_primary">Get a qoute</Link>
+            <NavLink to="project" smooth={true} className="btn">Explore</NavLink>
+            <NavLink to="/get-quote" className="btn btn_primary">Get a qoute</NavLink>
           </div>
         </div>
         

@@ -1,8 +1,18 @@
+#services{
+    border: dashed;
+    width: 100%;
+}
+#services .container{
+    border: dashed;
+    width: 100%;
+}
 #services .services_container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 50px;
+    width: 100%;
+    border: dashed;
 }
 #services .container .title{
     font-size: 2rem;

@@ -9,7 +9,7 @@ import { footer, teams } from '../../data'
 const Footer = () => {
   return (
     <footer id='footer'>
-      <div className="container">
+      
         <div className="row">
           <div className="column">
             <Logo/>
@@ -26,26 +26,25 @@ const Footer = () => {
             </form>
           </div>
          
-          {
-            footer.map((list,index)=>(
-              <div className="column" key={index}>
-              
-                <div className="routes_name">{list.name}</div>
-           
-        
-                <div className="routes_container">
-                  {
-                    list.routes.map((route,i)=>(
-                      <Link to={route.id} className='route_item' key={i}>
-                        <p className="name">{route.name}</p>
-                      </Link>
-                    ))
-                  }
-                </div>
+          {footer.map((list, index) => (
+            <div className="column" key={index}>
+              <div className="routes_name">{list.name}</div>
+              <div className="routes_container">
+                {list.routes.map((route, i) => (
+                  route.id ? (
+                    <Link to={route.id} className='route_item' key={i}>
+                      <p className="name">{route.name}</p>
+                    </Link>
+                  ) : (
+                    <span className='route_item' key={i}>
+                      <p className="name">{route.name}</p>
+                    </span>
+                  )
+                ))}
               </div>
-            ))
-          }
-         
+            </div>
+          ))}
+
          
         </div>
         
@@ -68,7 +67,7 @@ const Footer = () => {
 
           </div>
         </div>
-      </div>
+      
       
     </footer>
   )

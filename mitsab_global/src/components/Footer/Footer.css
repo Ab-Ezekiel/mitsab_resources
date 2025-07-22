@@ -1,23 +1,26 @@
 
-  #footer{
+#footer{
     position: relative;
     width: 100%;
-    padding: 20px;
-    text-align: center;
-    margin-top: 4rem;
+    
+    text-align: left;
+    padding: 3rem;
     box-sizing: border-box;
     background: rgb(6, 20, 43);
     z-index: 200;
+    border: dashed;
 }
+
 #footer .row {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three equal columns */
     justify-content: space-between;
-    gap: 5rem; /* Space between columns */
-    background: var(--color-ui-variant);
-    margin-top: -4rem;
-    border-radius: var(--radius-3);
+    gap: 6rem; /* Space between columns */
+    background: rgb(6, 20, 43);
+    color: var(--color-white);
+    width: 100%;
     padding: 1rem;
+    margin-left: 10rem;
 }
 
 #footer .column {
@@ -59,10 +62,12 @@
 
 #footer .mission-text{
     font-weight: 600;
+    width: 50%;
+    text-align: justify;
 }
 
 #footer .newsletter {
-    margin-top: 10px;
+    margin-top: 3rem;
 }
 
 #footer .newsletter h3 {
@@ -73,7 +78,7 @@
     display: flex;
     align-items: stretch;
     max-width: 500px;
-    margin: auto;
+    
     border-radius: var(--radius-2);
     overflow: hidden;
 }
@@ -83,7 +88,6 @@
     display: block;
     padding: 15px;
     background: var(--color-ui-variant);
-    color: var(--color-text);
     font-size: 15px;
     overflow: hidden;
     transition: var(--transition);
@@ -100,6 +104,7 @@
     display: flex;
     flex-direction: row;
     width: 40%;
+    margin-left: 6rem;
 }
 #footer .socials{
     display: flex;
@@ -122,19 +127,20 @@
 
 #footer .copyright {
     background: rgb(11, 24, 51);
-    margin-top: 0rem;
-    margin-bottom: -6rem;
-    border-radius: var(--radius-3);
+    margin-top: 2rem;
+   
     display: flex;
+    flex-direction: row; 
 }
 
 #footer .copyright .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 10rem;
     text-align: center;
     padding: 40px 20px;
+    margin-left: 6.8rem;
 }
 
 #footer .copyright h3 {

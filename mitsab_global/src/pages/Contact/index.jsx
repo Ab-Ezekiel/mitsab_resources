@@ -72,7 +72,8 @@ const Contact = () => {
                   {contact.icon}
                 </div>
                 <h3 className="name">{contact.name}</h3>
-                <h4 className="text_muted">{contact.value}</h4>
+                <h4 className="text_muted">{contact.value1}</h4>
+                <h4 className="text_muted">{contact.value2}</h4>
                 <div>
                   <a href={"#"} className='btn btn_primary'>Contact Us</a>
                 </div>

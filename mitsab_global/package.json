@@ -1,5 +1,5 @@
 {
-  "name": "benvix",
+  "name": "mitsabresources",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "framer-motion": "^12.9.4",
     "gsap": "^3.12.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

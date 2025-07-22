@@ -1,6 +1,9 @@
 #header{
     background: var(--glow-1);
     position: static !important;
+    
+    border: dashed;
+
 }
 #header::before{
     content: "";
@@ -18,6 +21,7 @@
 #header .container{
     padding-top: 30px;
 }
+
 /*
 
 #header .container .row .column:first-child{
@@ -47,8 +51,8 @@
 #header .container .row .column {
     flex: 1; /* Makes columns equal width */
    
-   
 }
+
 
 #header .container .row .column:first-child {
     border-radius: var(--radius-3);
@@ -75,14 +79,27 @@
 }
 
 #header .image_container{
-    width: 100%; /* Ensures the image fits within its container */
-    max-width: 100%; /* Prevents the image from overflowing */
-    height: auto; /* Maintains the aspect ratio */
-    border-radius: var(--radius-2);
-    transition: var(--transition);
-    padding: 5rem;
-    display: none;
+    position: relative; /* stacking context */
+    z-index: 10; /* in front */
+    background-color: rgba(255, 255, 255, .0); /* light white with transparency */
+    border-radius: var(--radius-3); /* if you want rounded corners */
+    overflow: hidden; /* so image doesn't overflow outside */
+    padding: 2rem; /* adjust padding as needed */
+     padding: 1rem;
+     width: 100%;
+     height: 35rem;
+     margin-top: 0;
 }
+
+#header .image_container img {
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    
+    z-index: -1; /* send image behind */
+    opacity: 0.1; /* faint image */
+  }
 
 #header .image_container:hover img{
     transform: scale(1.2);

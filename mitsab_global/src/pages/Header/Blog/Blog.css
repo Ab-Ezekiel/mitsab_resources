@@ -1,13 +1,17 @@
+
 #blog .blogs_container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 50px;
+    
 }
 #blog .blog_card{
     position: relative;
     border-radius: var(--radius-3);
     overflow: hidden;
+    width: 100%;
+    border: dashed;
 }
 #blog .blog_card .category{
     position: absolute;

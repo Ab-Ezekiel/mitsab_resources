@@ -52,10 +52,17 @@
     margin-bottom: 15px;
   }
   
-  #testimonial .slick-slide .profile img {
-    width: 35px; /* Adjust based on your design */
-    height: 50px;
+  #testimonial .slick-slide .profile {
+    width: 70px; /* Adjust based on your design */
+    height: 100px;
+    
   }
+
+  #testimonial .slick-slide .profile img {
+    width: 70px; /* Adjust based on your design */
+    height: 30px;
+  }
+  
   
   #testimonial .slick-slide .details {
     flex: 1;
