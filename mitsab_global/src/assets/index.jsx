@@ -17,11 +17,10 @@ export {default as building_5} from "./building-5.jpeg";
 export {default as building_6} from "./building-6.jpeg";
 export {default as building_7} from "./building-7.jpeg";
 export {default as building_8} from "./building-8.jpeg";
-export {default as building_9} from "./building-9.jpeg";
+
 export {default as building_10} from "./building-10.jpeg";
 export {default as blog_1} from "./blog-1.jpeg";
-export {default as blog_2} from "./blog-2.jpeg";
-export {default as blog_3} from "./blog-3.jpeg";
+
 export {default as home_image1} from "./mitsab-work3.jpeg";
 export {default as welder_Work} from "./my-images2.jpeg";
 export {default as logo} from "./logo.jpeg";

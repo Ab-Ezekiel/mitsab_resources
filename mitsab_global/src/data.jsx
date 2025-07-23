@@ -13,10 +13,10 @@ import { MdLandscape } from "react-icons/md";
 import { slugify } from "./utils/slugify";
 import { RiWaterFlashFill } from "react-icons/ri";
 
-import { profile3,profile4,profile5,home_image2,infras, infras2,soak_away_pit, soak_away_pit1, soak_away_pit2,
-         member1, member2, member3, member4,building_5,building_6,building_res, building_res1,
-         building_7, building_8,building_9,building_10,Renovation_hospital,Renovation_hospital1,
-        blog_1,blog_2,blog_3, borehole_image, borehole_image2, mitsab_maintenance,tank_maintenance,
+import { home_image2,infras, infras2,soak_away_pit, soak_away_pit1, soak_away_pit2,
+         member1, member2, member3, member4,building_res, building_res1,
+       Renovation_hospital,Renovation_hospital1,
+         borehole_image, borehole_image2, mitsab_maintenance,tank_maintenance,
         portacabin,portacabin1, portacabin2, portacabin3, portacabin4,
         Rd_const,
         storage_tank_base,
@@ -1232,7 +1232,7 @@ export const testimonial = [
 export const blogs = [
   {
       title:"Sustainable Construction: Building for the Future",
-      image:blog_1,
+      image:building_res,
       category:"Building",
       content:`
         As the construction industry continues to evolve, the focus on sustainability 

@@ -146,7 +146,7 @@ const About = () => {
             </div>
           </div>
           <div className="buttons_container">
-            <NavLink to="project" smooth={true} className="btn">Explore</NavLink>
+            <NavLink to="project" className="btn">Explore</NavLink>
             <NavLink to="/get-quote" className="btn btn_primary">Get a qoute</NavLink>
           </div>
         </div>
