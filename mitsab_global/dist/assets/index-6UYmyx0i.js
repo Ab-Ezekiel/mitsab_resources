@@ -1,1 +1,0 @@
-import{j as s,L as o}from"./index-z1IEh-lH.js";import{l as a}from"./logo-DwxE1HBu.js";const t=()=>s.jsxs("div",{className:"logo",children:[s.jsx(o,{to:"/",className:"icon_container",children:s.jsx("img",{src:a,alt:""})}),s.jsxs("h1",{className:"title",children:["Mitsab Resources ",s.jsx("span",{className:"g-text",children:"Global Limited"})]})]});export{t as L};
