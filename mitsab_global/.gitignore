@@ -1,0 +1,32 @@
+# node modules
+node_modules/
+
+# Vite build output
+dist/
+
+# system files
+.DS_Store
+
+# local env settings
+.env.local
+.env.*.local
+*.env
+
+# package lock
+package-lock.json
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# virtual environment (in case it's related to Python setup)
+.mitsab_venv/
+
+# log files
+*.log
+
+# OS files
+Thumbs.db
+
+# misc
+*.tgz
