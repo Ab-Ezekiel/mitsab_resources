@@ -27,6 +27,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    
 }
 
 #footer .routes_container {
@@ -62,8 +63,9 @@
 
 #footer .mission-text{
     font-weight: 600;
-    width: 50%;
+    width: 80%;
     text-align: justify;
+    
 }
 
 #footer .newsletter {

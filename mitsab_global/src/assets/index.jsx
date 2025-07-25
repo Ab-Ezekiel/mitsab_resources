@@ -32,6 +32,8 @@ export {default as home_image6} from "./pixel4.jpg";
 export {default as borehole_image} from "./mitsab_borehole.png";
 export {default as borehole_image2} from "./mitsab_borehole2.png";
 export {default as mitsab_maintenance} from "./mitsab_maintenance.png";
+export {default as mitsab_maintenance1} from "./mitsab_maintenance1.png";
+export {default as mitsab_maintenance2} from "./mitsab_maintenance2.png";
 export {default as tank_maintenance} from "./tank_maintenance.png";
 export {default as storage_tank_base} from "./storage_tank_base.jpeg";
 export {default as storage_tank_base1} from "./storage_tank_base1.jpeg";

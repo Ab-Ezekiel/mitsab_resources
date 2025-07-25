@@ -41,7 +41,9 @@ import { home_image2,infras, infras2,soak_away_pit, soak_away_pit1, soak_away_pi
         cat,
         cat1,
         cat2,
-        cat4} from "./assets";
+        cat4,
+        mitsab_maintenance1,
+        mitsab_maintenance2} from "./assets";
 
 export const navTabs = [
     {name:"Home",id:'header'},
@@ -59,7 +61,7 @@ export const services = [
     detailId: "construction-services",
     name:"General Contracting",
     icon:<SiBlueprint/>,
-    description:`This involves overseeing the entire construction project from start to finish, 
+    description:`Mitsab Resources Global Ltd oversees entire construction project from start to finish, 
         including hiring subcontractors, managing the budget, scheduling, and ensuring that the
         project meets all specifications and regulations.`,
   },
@@ -69,7 +71,7 @@ export const services = [
     detailId: "project-and-program-management-services",
     name: "Project and Program Management",
     icon:<GrUserManager/>,
-    description:`Construction companies often provide project management services, which include 
+    description:`Mitsab Resources Global Ltd provides project management services, which include 
        planning, coordinating, and overseeing projects to ensure they are completed on time, within 
        budget, and to the required quality standards.`,
   },
@@ -90,7 +92,7 @@ export const services = [
     detailId: "renovation-and-remodeling",
     name:"Renovation and Remodeling",
     icon:<SiHomeassistantcommunitystore/>,
-    description:`Many construction companies specialize in renovation and remodeling services, 
+    description:`We specialize in renovation and remodeling services, 
                 which involve updating and improving existing structures. This can range from minor 
                 repairs to major overhauls of residential, commercial, or industrial properties.`,
   },
@@ -117,18 +119,17 @@ export const services = [
     detailId: "manpower-supply-and-management-Services",
     name:"Manpower Supply and Management",
     icon:<SiHomeassistantcommunitystore/>,
-    description:`Many construction companies specialize in renovation and remodeling services, 
-                which involve updating and improving existing structures. This can range from minor 
-                repairs to major overhauls of residential, commercial, or industrial properties.`,
+    description:`Mitsab Resources Global Ltd stands out in Personnel and Supply Management, backed by 
+      partnerships with the Federal Ministry of Labour and key regulatory bodies in the Oil and Gas industry. 
+      We specialize in acquiring and managing technical resources and workforce, employing robust strategies 
+      to enhance organizational efficiency and performance.`,
   },
   {
     id:8,
     detailId: "borehole-drilling-services",
     name:"Borehole Drilling Services",
     icon:<RiWaterFlashFill/>,
-    description:`Before construction begins, companies often handle site preparation tasks such 
-        as land clearing, excavation, grading, and utility installation to ensure the site is ready 
-        for building.`,
+    description:`Mitsab Resources Global Limited now offers expert Borehole Drilling Services, delivering reliable and sustainable water solutions for residential, commercial, and agricultural needs. With advanced equipment, skilled professionals, and a strong focus on quality and environmental responsibility, Mitsab ensures efficient and tailored access to clean water.`,
   },
   {
     id:9,
@@ -232,7 +233,7 @@ export const servicesDetail = [
       The company recognizes the importance of having a competent and efficient workforce to ensure the seamless execution of construction projects. 
       Whether its a short-term assignment or a long-term engagement, Mitsab Reasources tailors its services to meet the specific requirements of each client.`,
 
-    moreDetailImages: [infras2],
+    moreDetailImages: [infras2, infras],
     detailsDescription3:`
       What sets Mitsab Reasources apart is its meticulous approach to manpower management. The company goes beyond merely supplying personnel; it takes on the 
       responsibility of ensuring that the right individuals, with the necessary skills and expertise, are deployed to match the unique demands of each project. 
@@ -352,7 +353,7 @@ export const servicesDetail = [
   {
     id: "borehole-drilling-services",
     name: "Borehole Drilling Services",
-    detailImage: borehole_image,
+    detailImage: borehole_image2,
     detailsHeading: `Tapping into Expertise: MITSAB RESOURCES GLOBAL LIMITED Introduces Borehole Drilling Services`,
     detailsDescription1: `
       Mitsab Reasources Global Limited, a leader in the construction industry, proudly unveils its Borehole Drilling Services, 
@@ -363,7 +364,7 @@ export const servicesDetail = [
       The Borehole Drilling Services offered by Mitsab Reasources encompass a comprehensive range of capabilities, from site 
       assessment and geological surveys to the installation of high-quality boreholes. The company employs state-of-the-art drilling 
       equipment operated by skilled professionals, ensuring precision in accessing clean and sustainable water sources.`,
-    moreDetailImages: [borehole_image2],
+    moreDetailImages: [borehole_image2, borehole_image],
     detailsDescription3:`
       Mitsab Reasources understands the critical role that water plays in various settings, be it for residential, commercial, 
       or agricultural purposes. The company’s borehole drilling services are tailored to meet the unique needs of each client, 
@@ -501,7 +502,7 @@ export const projects = [
   {
     id: slugify("Maintenance and Servicing Excellence in Partnership with Universal Energy Resources Limited Ensuring Optimal Performance for FUN CTF, Ibeno LGA, Akwa Ibom State"),
     title:"Maintenance and Servicing Excellence in Partnership with Universal Energy Resources Limited Ensuring Optimal Performance for FUN CTF, Ibeno LGA, Akwa Ibom State",
-    image:mitsab_maintenance,
+    image:mitsab_maintenance1,
     description:`Maintenance and Servicing Excellence: Ensuring Optimal Performance in Partnership with Universal Energy Resources Limited (UERL/SIPEC) for FUN CTF, Ibeno LGA, Akwa Ibom State`,
   },
   {
@@ -538,12 +539,7 @@ export const projects = [
     description:`In the realm of essential infrastructure, T-SAB RESOURCES, a proud subsidiary of MITSAB RESOURCES GLOBAL LTD, stands as a beacon of excellence. Our latest triumph involves the meticulous construction 
     of a military toilet, a reinforced concrete tank stand, and two cesspools for the esteemed FUN Military Base in Ibeno LGA, Akwa Ibom State.`,
   },
-  {
-    id: slugify("Maintenance and Repairs of CAT 3512 Generating Set for ALSCON, Ikot Abasi LGA, Akwa Ibom State Nigeria"),
-    title:"Maintenance and Repairs of CAT 3512 Generating Set for ALSCON, Ikot Abasi LGA, Akwa Ibom State Nigeria",
-    image:cat1,
-    description:`Maintenance and Repairs of CAT 3512 Generating Set for ALSCON, Ikot Abasi LGA, Akwa Ibom State Nigeria`,
-  },
+  
   {
     id: slugify("Fabrication and Welding of Dilapidated Storage Portacabin For UERL-SCL at Unyeghe, Mbo LGA, Akwa Ibom State, Nigeria"),
     title:"Fabrication and Welding of Dilapidated Storage Portacabin For UERL-SCL at Unyeghe, Mbo LGA, Akwa Ibom State, Nigeria",
@@ -633,7 +629,7 @@ export const projectsDetail = [
     id: slugify(`Enhancing Healthcare Infrastructure: T-SAB Resources a Subsidiary of MITSAB Reasources Global Constructs RC Water Tank Stand, Drills Borehole, and Installs Water Treatment Plant in Okoroutip, Akwa Ibom State`),
     name: `Enhancing Healthcare Infrastructure: T-SAB Resources a Subsidiary of MITSAB Reasources Global Constructs RC Water Tank Stand, Drills Borehole, and Installs Water Treatment Plant in Okoroutip, Akwa Ibom State`,
     
-    image: borehole_image,
+    image: borehole_image2,
     description1: `Mitsab Resources Global Ltd, through its subsidiary T-SAB Resources, proudly presents a noteworthy portfolio highlight – the successful completion of a 
       transformative project for Frontier Oil Limited in Okoroutip, Ibeno LGA, Akwa Ibom State. This comprehensive initiative encompassed the construction of an RC water tank stand, 
       drilling of a water borehole, and the installation of a cutting-edge water treatment plant with a dedicated generating set.`,
@@ -691,7 +687,7 @@ export const projectsDetail = [
     id: slugify(`Maintenance and Servicing Excellence in Partnership with Universal Energy Resources Limited Ensuring Optimal Performance for FUN CTF, Ibeno LGA, Akwa Ibom State`),
     name: `Maintenance and Servicing Excellence in Partnership with Universal Energy Resources Limited Ensuring Optimal Performance for FUN CTF, Ibeno LGA, Akwa Ibom State`,
     
-    image: mitsab_maintenance,
+    image: mitsab_maintenance2,
     description1: `In the dynamic landscape of the energy sector, maintaining the integrity and efficiency of critical infrastructure is paramount. De-Absareal Global Ltd, a proud subsidiary of 
       MITSAB RESOURCES GLOBAL LTD, has emerged as a stalwart in the field, showcasing unparalleled expertise in the maintenance and servicing of Foam Concentrate Tank Valves. 
       This specialized undertaking has been executed with precision for the esteemed client, Universal Energy Resources Limited (UERL/SIPEC), at the FUN CTF facility in Ibeno LGA, Akwa Ibom State.`,
@@ -717,7 +713,7 @@ export const projectsDetail = [
 
       },
     ],
-    gallery: [mitsab_maintenance],
+    gallery: [mitsab_maintenance2, mitsab_maintenance1],
     description3: [
       {
         type: "section",
@@ -769,7 +765,7 @@ export const projectsDetail = [
 
       },
     ],
-    gallery: [tank_maintenance],
+    gallery: [tank_maintenance, tank_maintenance],
     description3: [
       {
         type: "section",
@@ -825,7 +821,7 @@ export const projectsDetail = [
 
       },
     ],
-    gallery: [Renovation_hospital1],
+    gallery: [Renovation_hospital1, Renovation_hospital],
     description3: [
       {
         type: "section",
@@ -877,7 +873,7 @@ export const projectsDetail = [
 
       },
     ],
-    gallery: [infras2],
+    gallery: [infras2, infras],
     description3: [
       {
         type: "section",
@@ -959,7 +955,7 @@ export const projectsDetail = [
     id: slugify(`Building Resilient Infrastructure for FUN Military Base, Ibeno LGA, Akwa Ibom State: A Triumph by T-SAB RESOURCES, a Subsidiary of MITSAB RESOURCES GLOBAL LTD`),
     name: `Building Resilient Infrastructure for FUN Military Base, Ibeno LGA, Akwa Ibom State: A Triumph by T-SAB RESOURCES, a Subsidiary of MITSAB RESOURCES GLOBAL LTD`,
   
-    image: building_res,
+    image: building_res1,
     description1: `In the realm of essential infrastructure, T-SAB RESOURCES, a proud subsidiary of MITSAB RESOURCES GLOBAL LTD, stands as a beacon of excellence. 
     Our latest triumph involves the meticulous construction of a military toilet, a reinforced concrete tank stand, and two cesspools for the esteemed FUN Military Base in Ibeno LGA, Akwa Ibom State.`,
     description2: [
@@ -983,7 +979,7 @@ export const projectsDetail = [
 
       },
     ],
-    gallery: [building_res1],
+    gallery: [building_res, building_res1],
     description3: [
       {
         type: "section",
@@ -1013,11 +1009,12 @@ export const projectsDetail = [
     completionDate: "2024-12-01",
     category: "Building"
   },
+  
   {
     id: slugify(`Fabrication and Welding of Dilapidated Storage Portacabin For UERL-SCL at Unyeghe, Mbo LGA, Akwa Ibom State, Nigeria`),
     name: `Fabrication and Welding of Dilapidated Storage Portacabin For UERL-SCL at Unyeghe, Mbo LGA, Akwa Ibom State, Nigeria`,
   
-    image: portacabin3,
+    image: portacabin4,
     description1: `Fabrication and Welding of Dilapidated Storage Portacabin For UERL-SCL at Unyeghe, Mbo LGA, Akwa Ibom State, Nigeria`,
     description2: [
       {
@@ -1037,7 +1034,7 @@ export const projectsDetail = [
 
       },
     ],
-    gallery: [portacabin, portacabin1, portacabin2, portacabin4, ],
+    gallery: [portacabin, portacabin1, portacabin2, portacabin3, ],
     description3: [
       {
         type: "section",
