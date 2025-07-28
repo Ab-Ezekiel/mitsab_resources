@@ -1,147 +1,137 @@
-
-import { useState, useEffect, useRef } from "react"
-import { motion } from "framer-motion"
-import { projects } from "../../../data.jsx"
-import "./ProjectSlider.css"
-import gsap from "gsap"
-import { useGSAP } from "@gsap/react"
-import ScrollTrigger from "gsap/dist/ScrollTrigger"
-
-// Register the ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger)
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import "./ProjectSlider.css";
+import { projects } from "../../../data";
+import { Link } from "react-router-dom";
 
 const ProjectSlider = () => {
-  const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4, 5])
-  const [autoSlidePaused, setAutoSlidePaused] = useState(false)
-  const container = useRef(null)
-
-  // GSAP animations using useGSAP
-  useGSAP(
-    () => {
-      const timeline = gsap.timeline({
-        delay: 0.2,
-        scrollTrigger: {
-          trigger: container.current,
-          start: "20% bottom",
-          end: "bottom top",
-          // Uncomment to see the trigger boundaries during development
-          // markers: true,
-        },
-      })
-
-      timeline
-        .from(".slider-title", {
-          y: 50,
-          opacity: 0,
-          duration: 0.8,
-        })
-        .from(".slider-subtitle", {
-          y: 30,
-          opacity: 0,
-          duration: 0.6,
-        })
-        .from(".project-slide", {
-          scale: 0.8,
-          opacity: 0,
-          stagger: 0.15,
-          duration: 0.5,
-        })
-        .from(".slider-controls", {
-          y: -30,
-          opacity: 0,
-          duration: 0.5,
-        })
-    },
-    { scope: container },
-  )
+  const itemsPerSlide = 3;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [autoSlidePaused, setAutoSlidePaused] = useState(false);
+  const [viewMode, setViewMode] = useState("slide");
 
   const handleNext = () => {
-    // Temporarily pause auto-sliding
-    setAutoSlidePaused(true)
-
-    setPositionIndexes((prevIndexes) => {
-      const updatedIndexes = prevIndexes.map((prevIndex) => (prevIndex + 1) % projects.length)
-      return updatedIndexes
-    })
-
-    // Resume auto-sliding after 10 seconds of inactivity
-    setTimeout(() => setAutoSlidePaused(false), 10000)
-  }
+    setCurrentIndex((prev) => (prev + itemsPerSlide) % projects.length);
+  };
 
   const handlePrev = () => {
-    // Temporarily pause auto-sliding
-    setAutoSlidePaused(true)
+    setCurrentIndex((prev) =>
+      (prev - itemsPerSlide + projects.length) % projects.length
+    );
+  };
 
-    setPositionIndexes((prevIndexes) => {
-      const updatedIndexes = prevIndexes.map((prevIndex) => (prevIndex - 1 + projects.length) % projects.length)
-      return updatedIndexes
-    })
-
-    // Resume auto-sliding after 10 seconds of inactivity
-    setTimeout(() => setAutoSlidePaused(false), 10000)
-  }
+  const getVisibleProjects = () => {
+    const end = currentIndex + itemsPerSlide;
+    if (end <= projects.length) {
+      return projects.slice(currentIndex, end);
+    } else {
+      return [
+        ...projects.slice(currentIndex),
+        ...projects.slice(0, end - projects.length),
+      ];
+    }
+  };
 
   useEffect(() => {
-    // Only set up interval if auto-slide is not paused
-    if (!autoSlidePaused) {
+    if (!autoSlidePaused && viewMode === "slide" && projects.length > 0) {
       const interval = setInterval(() => {
-        handleNext()
-      }, 5000) // 5 seconds
-
-      // Clear the interval when component unmounts or when paused
-      return () => clearInterval(interval)
+        handleNext();
+      }, 5000);
+      return () => clearInterval(interval);
     }
-  }, [autoSlidePaused])
+  }, [autoSlidePaused, viewMode, currentIndex]);
 
-  const positions = ["center", "left1", "left", "right", "right1", "hidden"]
-  const imageVariants = {
-    center: { x: "0%", scale: 1, zIndex: 5, opacity: 1 },
-    left1: { x: "-50%", scale: 0.7, zIndex: 2, opacity: 0.8 },
-    left: { x: "-90%", scale: 0.5, zIndex: 1, opacity: 0.6 },
-    right: { x: "90%", scale: 0.5, zIndex: 1, opacity: 0.6 },
-    right1: { x: "50%", scale: 0.7, zIndex: 2, opacity: 0.8 },
-    hidden: { x: "0%", scale: 0, zIndex: 0, opacity: 0 },
+  if (!projects || projects.length === 0) {
+    return <div>No projects to display</div>;
   }
 
   return (
-    <section id="projects" ref={container}>
-      <div className="project-container">
-        <h2 className="slider-title">Our Featured Projects</h2>
-        <p className="slider-subtitle">Explore our portfolio of successful construction projects</p>
+    <div className="project-slider-container">
+      <h2 className="sub_title">Innovative construction projects, exceptional craftsmanship.</h2>
+      <div className="view-toggle">
+        <button
+          onClick={() => setViewMode("slide")}
+          className={viewMode === "slide" ? "active" : ""}
+        >
+          Slide View
+        </button>
+        <button
+          onClick={() => setViewMode("grid")}
+          className={viewMode === "grid" ? "active" : ""}
+        >
+          Grid View
+        </button>
+      </div>
 
+      {viewMode === "slide" ? (
+      <>
         <div
           className="slider-container"
           onMouseEnter={() => setAutoSlidePaused(true)}
           onMouseLeave={() => setAutoSlidePaused(false)}
         >
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              className="project-slide"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={positions[positionIndexes.indexOf(index)]}
-              variants={imageVariants}
-              transition={{ duration: 0.8 }}
-            >
-              <motion.img src={project.image} alt={project.title} className="slider-image" />
-              <div className={`project-info ${positions[positionIndexes.indexOf(index)] === "center" ? "active" : ""}`}>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-              </div>
-            </motion.div>
+          {getVisibleProjects().map((project, index) => (
+            <Link to={`/projects/${project.id}`} className="project-link">
+              <motion.div
+                key={project.id || index}
+                className="project-slide"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                {project.image && (
+                  <motion.img
+                    src={project.image}
+                    alt={project.title}
+                    className="slider-image"
+                    onError={(e) => {
+                      e.target.src = "fallback.jpg";
+                    }}
+                  />
+                )}
+                <div className="project-info active">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                </div>
+              </motion.div>
+            </Link>
           ))}
-          <div className="slider-controls">
-            <button className="prev-button" onClick={handlePrev}>
-              Prev
-            </button>
-            <button className="next-button" onClick={handleNext}>
-              Next
-            </button>
-          </div>
         </div>
-      </div>
-    </section>
-  )
-}
+        <div className="slider-controls">
+          <button className="prev-button" onClick={handlePrev}>
+            Prev
+          </button>
+          <button className="next-button" onClick={handleNext}>
+            Next
+          </button>
+        </div>
+      </>
+      ) : (
+        <div className="grid-container">
+          {projects.map((project, index) => (
+            <Link to={`/projects/${project.id}`} className="project-link">
+              <div key={project.id || index} className="grid-item">
+                {project.image && (
+                  <img
+                    src={project.image}
+                    alt={project.title || `Project ${index}`}
+                    className="grid-image"
+                    onError={(e) => {
+                      e.target.src = "fallback-image-url.jpg";
+                    }}
+                  />
+                )}
+                <div className="project-info">
+                  <h3>{project.title}</h3>
+                  {project.description && <p>{project.description}</p>}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 
-export default ProjectSlider
+export default ProjectSlider;

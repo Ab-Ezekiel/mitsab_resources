@@ -13,38 +13,30 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Blog = () => {
   const container = useRef(null) 
-  useGSAP(()=>{
+  useGSAP(() => {
+    const q = gsap.utils.selector(container);
+
     const timeline = gsap.timeline({
-      delay:.5,
-      scrollTrigger:{
-        trigger:container.current,
-        start:"20% bottom",
-        end:"bottom top",
+      delay: .5,
+      scrollTrigger: {
+        trigger: container.current,
+        start: "20% bottom",
+        end: "bottom top",
       },
     });
+
     timeline
-   
-    .from(
-      ".g-text",
-      {y:50, opacity:0}
-    )
-    .from(
-      ".sub_title",
-      {y:-50, opacity:0}
-    )
-    .fromTo(
-      ".blog_card",
-      {y:100, opacity:0},
-      {opacity:1, stagger:.5,y:0}
-    )
-   
-  },{scope:container})
+      .from(q(".g-text"), { y: 50, opacity: 0 })
+      .from(q(".blog_sub_title"), { y: -50, opacity: 0 })
+      .fromTo(q(".blog_card"), { y: 100, opacity: 0 }, { opacity: 1, stagger: .5, y: 0 });
+  }, { scope: container });
+
 
   return (
     <section id='blog' ref={container}>
       <div className="container">
         
-        <h3 className="sub_title">Explore our articles</h3>
+        <h3 className="blog_sub_title">Explore our articles</h3>
         <div className="blogs_container">
           {
             blogs.map((blog,index)=>(

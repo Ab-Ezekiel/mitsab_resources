@@ -1,141 +1,192 @@
-#projects {
+.project-slider-container {
   padding: 4rem 0;
   background-color: #f9f9f9;
 }
 
-.project-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+.project-slider-container .sub_title{
+  text-align: left;
+  padding-left: 60px;
 }
 
-.slider-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #333;
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem;
 }
 
-.slider-subtitle {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 3rem;
+.view-toggle button {
+  padding: 0.5rem 1.2rem;
+  background-color: #ddd;
+  border: none;
+  border-radius: var(--radius-2);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-toggle button.active,
+.view-toggle button:hover {
+  background-color: var(--color-primary-accent);
+  color: #fff;
 }
 
 .slider-container {
-  position: relative;
-  width: 100%;
-  height: 700px;
   display: flex;
+  gap: 3rem;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  margin: 2rem 0;
+  flex-wrap: nowrap;
+  position: relative;
+  margin: 0 1rem;
  
 }
 
 .project-slide {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  min-width: 400px;
+  flex-shrink: 0;
   background-color: #fff;
-  transition: all 0.8s ease;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.5s ease, opacity 0.5s ease;
   
 }
 
 .slider-image {
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
+  
+}
+.slider-image:hover {
+  transform: scale(1.15);
 }
 
 .project-info {
-  padding: 1.5rem;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  max-width: 500px;
-}
-
-.project-info.active {
-  opacity: 1;
+  padding: 1.2rem;
 }
 
 .project-info h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
   color: #333;
 }
 
 .project-info p {
-  margin: 0;
   font-size: 0.9rem;
   color: #666;
   line-height: 1.4;
 }
 
 .slider-controls {
-  position: absolute;
-  bottom: 20px;
   display: flex;
+  justify-content: center;
   gap: 1rem;
-  z-index: 10;
+  margin-top: 1rem;
 }
 
 .prev-button,
 .next-button {
-  padding: 0.5rem 1.5rem;
-  background-color: #333;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--color-primary-accent);
   color: white;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  border-radius: var(--radius-2);
   font-weight: bold;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .prev-button:hover,
 .next-button:hover {
-  background-color: #555;
+  background-color: #0b3358;
 }
 
-/* Responsive styles */
+/* Grid view styling */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Show 4 items per row */
+  gap: 2rem;
+  padding: 1rem;
+  margin: 3rem;
+}
+
+.grid-item {
+  background-color: #fff;
+  border-radius: var(--radius-2);
+  height: 400px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  position: relative;
+  
+  
+}
+.grid-item:hover {
+  transform: scale(1.02);
+}
+
+.grid-image {
+  width: 100%;
+  height: 150px;
+  /* object-fit: cover; */
+  border-bottom: 1px solid #eee;
+  border-radius: var(--radius-2);
+}
+
+.grid-item .project-info {
+  padding: 1rem;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  
+}
+.grid-item .project-info h3 {
+ font-size: 1rem;
+  line-height: 1.4;
+  word-break: break-word;
+  margin-bottom: 0.5rem;
+}
+
+.grid-item .project-info p {
+ font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .project-slide {
+    width: 250px;
+    min-width: 250px;
+  }
+}
+
 @media (max-width: 768px) {
+  .project-slide {
+    width: 200px;
+    min-width: 200px;
+  }
+
   .slider-container {
-    height: 450px;
+    gap: 1rem;
   }
 
-  .slider-title {
-    font-size: 2rem;
-  }
-
-  .project-info {
-    padding: 1rem;
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
 
 @media (max-width: 480px) {
-  .slider-container {
-    height: 400px;
+  .project-slide {
+    width: 100%;
+    min-width: 100%;
   }
 
-  .slider-title {
-    font-size: 1.8rem;
-  }
-
-  .slider-subtitle {
-    font-size: 1rem;
-  }
-
-  .project-info h3 {
-    font-size: 1.3rem;
-  }
-
-  .project-info p {
-    font-size: 0.8rem;
+  .grid-container {
+    grid-template-columns: 1fr;
   }
 }

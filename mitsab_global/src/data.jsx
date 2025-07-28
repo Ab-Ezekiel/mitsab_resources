@@ -489,28 +489,25 @@ export const projects = [
     id: slugify("Transforming Surroundings: Landscaping and Chippings Spraying at FUN CTF Area, Ibeno LGA, Akwa Ibom State by T-SAB RESOURCES, a Subsidiary of MITSAB RESOURCES GLOBAL LTD – In Collaboration with Frontier Oil Limited 2019"),
     title:"Transforming Surroundings: Landscaping and Chippings Spraying at FUN CTF Area, Ibeno LGA, Akwa Ibom State by T-SAB RESOURCES, a Subsidiary of MITSAB RESOURCES GLOBAL LTD – In Collaboration with Frontier Oil Limited 2019",
     image:home_image2,
-    description:`Transforming Surroundings: Landscaping and Chippings Spraying at FUN CTF Area, Ibeno LGA, Akwa Ibom State by T-SAB RESOURCES, 
-      a Subsidiary of MITSAB RESOURCES GLOBAL LTD – In Collaboration with Frontier Oil Limited 2019`,
+    description:``,
   },
   {
     id: slugify("Enhancing Healthcare Infrastructure: T-SAB Resources a Subsidiary of MITSAB Reasources Global Constructs RC Water Tank Stand, Drills Borehole, and Installs Water Treatment Plant in Okoroutip, Akwa Ibom State"),
     title:"Enhancing Healthcare Infrastructure: T-SAB Resources a Subsidiary of MITSAB Reasources Global Constructs RC Water Tank Stand, Drills Borehole, and Installs Water Treatment Plant in Okoroutip, Akwa Ibom State",
     image:borehole_image,
-    description:`Enhancing Healthcare Infrastructure: T-SAB Resources a Subsidiary of 
-      MITSAB Reasources Global Constructs RC Water Tank Stand, Drills Borehole, and Installs Water Treatment Plant in Okoroutip, Akwa Ibom State`,
+    description:``,
   },
   {
     id: slugify("Maintenance and Servicing Excellence in Partnership with Universal Energy Resources Limited Ensuring Optimal Performance for FUN CTF, Ibeno LGA, Akwa Ibom State"),
     title:"Maintenance and Servicing Excellence in Partnership with Universal Energy Resources Limited Ensuring Optimal Performance for FUN CTF, Ibeno LGA, Akwa Ibom State",
     image:mitsab_maintenance1,
-    description:`Maintenance and Servicing Excellence: Ensuring Optimal Performance in Partnership with Universal Energy Resources Limited (UERL/SIPEC) for FUN CTF, Ibeno LGA, Akwa Ibom State`,
+    description:``,
   },
   {
     id: slugify("Elevating Precision: Scaffold Installation and Tank Maintenance at FUN CTF, Ibeno LGA, Akwa Ibom State by De-Absareal Global Ltd, a Subsidiary of MITSAB RESOURCES GLOBAL LTD – In Partnership with Universal Energy Resources Limited-Sinopec"),
     title:"Elevating Precision: Scaffold Installation and Tank Maintenance at FUN CTF, Ibeno LGA, Akwa Ibom State by De-Absareal Global Ltd, a Subsidiary of MITSAB RESOURCES GLOBAL LTD – In Partnership with Universal Energy Resources Limited-Sinopec",
     image:tank_maintenance,
-    description:`In the intricate landscape of industrial maintenance, De-Absareal Global Ltd, a distinguished subsidiary of MITSAB RESOURCES GLOBAL LTD, takes center stage. Our latest achievement involves the meticulous installation of scaffolding 
-      for the servicing of a leaked valve point and the comprehensive washing of the external surface of the Off Spec Tank at FUN CTF in Ibeno LGA, Akwa Ibom State.`,
+    description:``,
   },
   {
     id: slugify("Undertake of the Renovation of Mkpanak Health Center"),
@@ -523,34 +520,32 @@ export const projects = [
     id: slugify("Enhancing Safety Infrastructure at FUN CTF, Ibeno LGA, Akwa Ibom State"),
     title:"Enhancing Safety Infrastructure at FUN CTF, Ibeno LGA, Akwa Ibom State",
     image:infras2,
-    description:`Mitsab Resources Global Ltd, through its subsidiary T-SAB Resources, is proud to showcase another impactful project undertaken for Frontier Oil Limited at FUN CTF, Ibeno LGA, Akwa Ibom State. This project involved the construction 
-    of a bund wall around the Diesel Tank Shelter and the meticulous concreting of the base floor, illustrating Mitsab Resources Global Ltd’s unwavering commitment to safety and infrastructure excellence.`,
+    description:`Mitsab Resources Global Ltd, through its subsidiary T-SAB Resources, is proud to showcase another impactful project undertaken for Frontier Oil Limited at FUN CTF, Ibeno LGA, Akwa Ibom State. `,
   },
   {
     id: slugify("A precast Concreting and Construction of a 2no Soak away Pit and Septic tank for NEPN Drilling Camp Site at Qua Iboe Field, Ibeno LGA Akwa Ibom State Nigeria"),
     title:"A precast Concreting and Construction of a 2no Soak away Pit and Septic tank for NEPN Drilling Camp Site at Qua Iboe Field, Ibeno LGA Akwa Ibom State Nigeria",
     image:soak_away_pit,
-    description:`A precast Concreting and Construction of a 2no Soak away Pit and Septic tank for NEPN Drilling Camp Site at Qua Iboe Field, Ibeno LGA Akwa Ibom State Nigeria`,
+    description:``,
   },
   {
     id: slugify("Building Resilient Infrastructure for FUN Military Base, Ibeno LGA, Akwa Ibom State: A Triumph by T-SAB RESOURCES, a Subsidiary of MITSAB RESOURCES GLOBAL LTD"),
     title:"Building Resilient Infrastructure for FUN Military Base, Ibeno LGA, Akwa Ibom State: A Triumph by T-SAB RESOURCES, a Subsidiary of MITSAB RESOURCES GLOBAL LTD",
     image:building_res,
-    description:`In the realm of essential infrastructure, T-SAB RESOURCES, a proud subsidiary of MITSAB RESOURCES GLOBAL LTD, stands as a beacon of excellence. Our latest triumph involves the meticulous construction 
-    of a military toilet, a reinforced concrete tank stand, and two cesspools for the esteemed FUN Military Base in Ibeno LGA, Akwa Ibom State.`,
+    description:``,
   },
   
   {
     id: slugify("Fabrication and Welding of Dilapidated Storage Portacabin For UERL-SCL at Unyeghe, Mbo LGA, Akwa Ibom State, Nigeria"),
     title:"Fabrication and Welding of Dilapidated Storage Portacabin For UERL-SCL at Unyeghe, Mbo LGA, Akwa Ibom State, Nigeria",
     image:portacabin3,
-    description:`Fabrication and Welding of Dilapidated Storage Portacabin For UERL-SCL at Unyeghe, Mbo LGA, Akwa Ibom State, Nigeria`,
+    description:``,
   },
   {
     id: slugify("Concreting Expansion of the FUN Facilty Manifold Entrance Gate and Road Rehabilitation for UERL-SINOPEC at IBENO LGA, AKWA IBOM STATE - 2022"),
     title:"Concreting Expansion of the FUN Facilty Manifold Entrance Gate and Road Rehabilitation for UERL-SINOPEC at IBENO LGA, AKWA IBOM STATE - 2022",
     image:Rd_const,
-    description:`Concreting Expansion of the FUN Facilty Manifold Entrance Gate and Road Rehabilitation for UERL-SINOPEC at IBENO LGA, AKWA IBOM STATE - 2022`,
+    description:``,
   },
   {
     id: slugify("Concreting of the off Spec Crude Storage Tank Base"),

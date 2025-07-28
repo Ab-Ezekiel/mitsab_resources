@@ -9,6 +9,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Link } from 'react-router-dom';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import Blog from '../Header/Blog';
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -63,7 +64,7 @@ const Project = () => {
   return (
     <section id="project" ref={container}>
       <div className="project_top">
-        <h1 className="title">Our <span className="g-text">Projects</span></h1>
+        <h1 className="sub_title">Our <span className="g-text">Projects</span></h1>
         <h3 className="sub_title">
           Innovative construction projects, exceptional craftsmanship.
         </h3>
@@ -87,6 +88,7 @@ const Project = () => {
           </div>
         ))}
       </Slider>
+      <Blog/>
     </section>
   );
 };

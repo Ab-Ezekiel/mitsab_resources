@@ -6,9 +6,11 @@
 #project .slick-tract{
     display: flex !important;
 }
-#project .project_container{
+#project .projects_container{
     margin-top: 40px;
     overflow: hidden;
+
+    margin: 0 0 5rem 0;
 }
 #project .slick-slide{
     height: inherit !important;
@@ -25,9 +27,17 @@
     align-items: flex;
     justify-content: space-between;
     flex-direction: column;
+    
+}
+
+#project .slick-slide img{
+    /* transform: scale(1.2); */
+    height: 500px;
+    
 }
 #project .slick-slide:hover .img{
     transform: scale(1.2);
+    height: 400px;
 }
 #project .slick-slide .image_container{
     overflow: hidden;

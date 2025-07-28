@@ -1,4 +1,11 @@
 
+
+#blog .container .blog_sub_title{
+    font-size: 25px;
+  font-weight: 600;
+  text-align: left;
+    
+}
 #blog .blogs_container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -11,7 +18,7 @@
     border-radius: var(--radius-3);
     overflow: hidden;
     width: 100%;
-    border: dashed;
+   
 }
 #blog .blog_card .category{
     position: absolute;

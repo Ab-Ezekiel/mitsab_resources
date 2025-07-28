@@ -6,7 +6,7 @@
     padding: 10px 20px;
     position: relative;
     z-index: 300;
-    border: dashed;
+    
 }
 .navbar .logo .name{
     color: var(--color-text);

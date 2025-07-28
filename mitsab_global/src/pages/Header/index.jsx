@@ -8,7 +8,7 @@ import Testimonies from './Testimonies';
 import Services from '../Services';
 import Contact from '../Contact';
 import Blog from './Blog'
-import Project from './Project';
+
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react';
 import Typewriter from './TypeWriter';
