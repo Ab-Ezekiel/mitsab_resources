@@ -9,6 +9,8 @@ const About = lazy(() => import("./pages/About"));
 const Services = lazy(() => import("./pages/Services"));
 const Teams = lazy(() => import("./pages/About/Teams"));
 const Project = lazy(() => import("./pages/Project"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogDetail = lazy(() => import("./pages/Blog/BlogDetail"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Footer = lazy(() => import("./components/Footer"));
 const GetQuote = lazy(() => import("./pages/GetQuote")); 
@@ -32,6 +34,8 @@ const App = () => {
               <Route path="/teams" element={<Teams />} />
               <Route path="/project" element={<Project />} />
               <Route path="/projects/:slug" element={<ProjectDetail />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogDetail />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/get-quote" element={<GetQuote/>} />
               <Route path="*" element={<div>404 - Page Not Found</div>} />

@@ -44,6 +44,21 @@ const ProjectSlider = () => {
   if (!projects || projects.length === 0) {
     return <div>No projects to display</div>;
   }
+  useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth <= 600) {
+      setViewMode("grid");
+    }
+  };
+
+  // Run once on mount
+  handleResize();
+
+  // Add event listener
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
 
   return (
     <div className="project-slider-container">
@@ -52,6 +67,7 @@ const ProjectSlider = () => {
         <button
           onClick={() => setViewMode("slide")}
           className={viewMode === "slide" ? "active" : ""}
+          disabled={window.innerWidth <= 600}
         >
           Slide View
         </button>
@@ -62,6 +78,7 @@ const ProjectSlider = () => {
           Grid View
         </button>
       </div>
+
 
       {viewMode === "slide" ? (
       <>

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import './Header.css';
-import { logo,storage_tank_base, home_image1, welder_Work,home_image2, home_image3, home_image4, home_image5, home_image6 } from '../../assets';
+import { logo,storage_tank_base, home_image1, welder_Work,home_image2, home_image3, home_image4, home_image5, home_image6, blog, blog5 } from '../../assets';
 import { Link } from 'react-scroll';
 import { NavLink } from "react-router-dom";
 import Achievement from './Achievement';
@@ -19,7 +19,7 @@ import ProjectSlider from './ProjectSlider';
 
 const Header = () => {
   const container = useRef(null);
-  const sliderImages = [home_image2, home_image5, home_image6]; 
+  const sliderImages = [home_image2, home_image5, home_image6, blog5]; 
   
   useGSAP(()=>{
     const timeline = gsap.timeline({delay:1, stagger:1});
@@ -65,14 +65,12 @@ const Header = () => {
               <NavLink to="contact"  className="btn btn_primary">
                 Contact Us
               </NavLink>
-              <NavLink to="contact"  className="btn btn_primary">
-                Explore Our Subsidiaries
-              </NavLink>
+             
             </div>
           </div>
 
           {/* Right Column - Image */}
-          <div className="column">
+          <div className="left_column">
       
             <div className="image_container">
               <img src={logo} alt="Hero" />

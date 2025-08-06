@@ -32,14 +32,15 @@ const navTabs = [
     ],
   },
   { id: "project", name: "Projects", path: "/project" },
+  { id: "blog", name: "Newsroom", path: "/blog" },
   { 
     id: "subsidiaries", 
     name: "Our Subsidiaries", 
     path: "/" ,
     dropdown2: [
-      { id: "subsidiary-1", name: "Tisab resources", path: "http://localhost:5174/"},
-      { id: "subsidiary-2", name: "De Absareal Fireservices", path: "http://localhost:5175/"},
-      { id: "subsidiary-3", name: "Mitsab Security and Surveillance", path: "http://localhost:5176/"},
+      { id: "subsidiary-1", name: "T-SAB RESOURCES", path: "http://localhost:5174/"},
+      { id: "subsidiary-2", name: "DE-ABSAREAL GLOBAL LIMITED", path: "http://localhost:5175/"},
+      { id: "subsidiary-3", name: "MITSAB SECURITY SERVICES LIMITED", path: "http://localhost:5176/"},
     ]
   }
 ];

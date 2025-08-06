@@ -52,7 +52,10 @@
     flex: 1; /* Makes columns equal width */
    
 }
-
+#header .container .row .left_column {
+    flex: 1; /* Makes columns equal width */
+   
+}
 
 #header .container .row .column:first-child {
     border-radius: var(--radius-3);
@@ -105,7 +108,10 @@
     transform: scale(1.2);
   
 }
-@media (max-width:900px){
+@media (max-width:1040px){
+    #header .left_column{
+        display: none;
+    }
     #header .container *{
         text-align: center;
     }

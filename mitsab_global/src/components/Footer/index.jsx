@@ -49,23 +49,24 @@ const Footer = () => {
         </div>
         
         <div className="copyright">
+          <div className='social-container'>
+            <p>Follow Us</p>
+            <div className='socials'>
+              {
+                teams[0].social.map((item,i)=>(
+                  <a href={item.url || "#"} target='_blank' className="icon_container" key={i}>
+                    {item.icon}
+                  </a>
+                ))
+              }
+            </div>
+
+          </div>
           <div className="container">
             <h3>Copyright &copy; 2025 | All Rights Reserved</h3>
             <p className="text_muted">Developed with precision and care by Manful Technologies</p>
           </div>
-          <div className='social-container'>
-            <p>Follow Us</p>
-            <div className='socials'>
-            {
-              teams[0].social.map((item,i)=>(
-                <a href={item.url || "#"} target='_blank' className="icon_container" key={i}>
-                  {item.icon}
-                </a>
-              ))
-            }
-          </div>
-
-          </div>
+          
         </div>
       
       

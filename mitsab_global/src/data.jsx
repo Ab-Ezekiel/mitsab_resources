@@ -43,7 +43,18 @@ import { home_image2,infras, infras2,soak_away_pit, soak_away_pit1, soak_away_pi
         cat2,
         cat4,
         mitsab_maintenance1,
-        mitsab_maintenance2} from "./assets";
+        mitsab_maintenance2,
+        blog,
+        blog1,
+        blog3,
+        blog4,
+        blog5,
+        marine1,
+        marine,
+        manpower1,
+        manpower,
+        manpower2,
+        manpower3} from "./assets";
 
 export const navTabs = [
     {name:"Home",id:'header'},
@@ -113,11 +124,10 @@ export const services = [
         challenges before construction begins.`,
   },
 
-
   {
     id:7,
-    detailId: "manpower-supply-and-management-Services",
-    name:"Manpower Supply and Management",
+    detailId: "manpower-supply-and-management-services",
+    name:"Manpower Supply and Management Services",
     icon:<SiHomeassistantcommunitystore/>,
     description:`Mitsab Resources Global Ltd stands out in Personnel and Supply Management, backed by 
       partnerships with the Federal Ministry of Labour and key regulatory bodies in the Oil and Gas industry. 
@@ -222,18 +232,18 @@ export const servicesDetail = [
   {
     id: "manpower-supply-and-management-services",
     name: "Manpower Supply and Management Services",
-    detailImage: infras,
+    detailImage: manpower1,
     detailsHeading: `Empowering Projects with Excellence: MITSAB RESOURCES GLOBAL LIMITED’s Manpower Supply and Management Services`,
     detailsDescription1: `
-      Mitsab Reasources Global Limited proudly introduces its Manpower Supply and Management Services, a testament to its 
-      commitment to delivering exceptional construction solutions. As a leading player in the industry, Mitsab Reasources 
-      specializes in providing skilled and reliable manpower to drive the success of diverse projects.`,
+      Mitsab Resources Global Ltd is recognized for its uniqueness in Personnel and Supply Management. Our human resources and Supply management approach 
+      is supported with a strong approved partnership with the Federal Ministry of Labour and Productivity and with other relevant regulatory bodies in 
+      Oil and Gas industry.`,
     detailsDescription2:`
-      Mitsab Reasources Manpower Supply and Management Services cover a spectrum of roles, from skilled labor to project management professionals. 
-      The company recognizes the importance of having a competent and efficient workforce to ensure the seamless execution of construction projects. 
-      Whether its a short-term assignment or a long-term engagement, Mitsab Reasources tailors its services to meet the specific requirements of each client.`,
+      This uniqueness focuses on acquiring and or overseeing/managing our client's technical resources and suppliers crucial for any operations for our client's 
+      services. We supply and manages organization's workforce. We employed a robust technical approach and Effective strategies as our key tools to overcoming 
+      the many challenges of personnel and supply management in impacting organizational efficiency and performance.`,
 
-    moreDetailImages: [infras2, infras],
+    moreDetailImages: [manpower, manpower2, manpower3],
     detailsDescription3:`
       What sets Mitsab Reasources apart is its meticulous approach to manpower management. The company goes beyond merely supplying personnel; it takes on the 
       responsibility of ensuring that the right individuals, with the necessary skills and expertise, are deployed to match the unique demands of each project. 
@@ -382,7 +392,7 @@ export const servicesDetail = [
     id: "pre-construction-services",
     name: "Pre-Construction Services",
     detailImage: mgt1,
-    detailsHeading: `Charting a Course for Excellence: MITSAB RESOURCES GLOBAL LIMITED’s Leading Pre-Construction Services`,
+    detailsHeading: `Charting a Course for Excellence: MITSAB RESOURCES GLOBAL LIMITED’s Leading Pre-Construction Activities/Meetings`,
     detailsDescription1: `
       Mitsab Reasources Global Limited, an industry leader in construction, proudly presents its distinguished Pre-Construction 
       Services, a pivotal element of its unwavering commitment to excellence in project planning and execution. Renowned for providing 
@@ -409,7 +419,7 @@ export const servicesDetail = [
   },
   {  
     id: "cat-engine-repairs-and-maintenance",
-    name: "CAT Engine Repairs & Maintenance",
+    name: "CAT ENGINE GENERATORS REPAIRS, SERVICING AND MAINTENANCE",
     detailImage: cat_video, // replace with actual imported image
     detailsHeading: `Powering Performance: Expert CAT Engine Service & Maintenance by MITSAB RESOURCES GLOBAL LIMITED`,
     detailsDescription1: `
@@ -431,7 +441,26 @@ export const servicesDetail = [
       technical excellence, and customer satisfaction. Let us help power your success with expert service that keeps your machines 
       moving and your projects on schedule.`,
     contactMessage: "Let us keep your CAT engines running at peak performance with expert service and trusted care."
-  }
+  },
+  {  
+    id: "marine-services",
+    name: "Marine Transportation Services",
+    detailImage: marine1, // replace with actual imported image
+    detailsHeading: `Marine Escort & Security Services`,
+    detailsDescription1: `
+      At Mitsab Resources Global Limited, we have recently expanded our marine operations with the successful deployment of a 
+      Security Escort Vessel (SEV) to support BP Marine Global Service. This operation involved escorting the MT Saphina, 
+      which was transporting 20 metric tons (MT) of Automotive Gas Oil (AGO) into Nigerian waters.`,
+    detailsDescription2: `
+      `,
+    moreDetailImages: [marine1, marine], // replace with actual images
+    detailsDescription3: `
+      This service underscores our growing capability in maritime security, offering clients reliable, compliant, and efficient 
+      escort solutions to ensure the safe delivery of valuable cargo through Nigeria’s territorial waters. From risk mitigation to 
+      real-time monitoring, Mitsab is committed to upholding safety and operational excellence in all marine logistics support.`,
+    detailsDescription4: ``,
+    contactMessage: "Partner with us for secure, efficient marine logistics. Let Mitsab safeguard your vessels with trusted escort solutions tailored to your operations.",
+  },
 
 
 ];
@@ -1223,15 +1252,17 @@ export const testimonial = [
 
 export const blogs = [
   {
-      title:"Sustainable Construction: Building for the Future",
-      image:building_res,
-      category:"Building",
+      title:"Empowering Performance Through Team Culture and Employee Recognition",
+      image:blog1,
+      images: [blog, blog3, blog4, blog5],
+      category:"Events",
       content:`
-        As the construction industry continues to evolve, the focus on sustainability 
-        has never been more critical. Sustainable construction is not just a trend; 
-        it's a necessity for our planet's future. In this blog post, we'll explore 
-        the principles of sustainable construction, the benefits it offers, and how 
-        our company is leading the way in eco-friendly building practices.
+        At Mitsab Resources Global Limited, we believe that teamwork is more 
+        than collaboration—it's a culture. By integrating a structured employee recognition 
+        strategy into our operations, we foster motivation, strengthen morale, and enhance 
+        our project delivery outcomes. In this post, we explore how recognizing our workforce 
+        and maintaining strong client partnerships drive exceptional performance across 
+        all levels of our organization.
       `,
       date:new Date("January 10, 2024"),
       likeCount:34,
@@ -1242,42 +1273,48 @@ export const blogs = [
       },
   },
   {
-      title:"The Importance of Quality Craftsmanship in Construction",
-      image:Rd_const,
-      category:"Construction",
-      content:`
-        Quality craftsmanship is the cornerstone of any successful construction project.
-         It ensures that buildings are not only aesthetically pleasing but also durable 
-         and safe. In this blog post, we'll delve into why quality craftsmanship matters 
-         and how our company upholds the highest standards in every project we undertake.
-      `,
-      date:new Date("December 15, 2023"),
-      likeCount:201,
-      commentCount:123,
-      tags:["Skills4Growth","EconSkillImpact","GrowWithSkills"],
-      poster:{
-          name:"Bissi",
-      },
+  title: "Expanding Our Reach: Marine Escort Services for Safe Cargo Delivery",
+  image: marine1, // main featured image
+  images: [marine1, marine ], // include actual imported images
+  category: "Marine Operations",
+  content: `
+    Mitsab Resources Global Limited is proud to announce the successful expansion of our marine operations, marked by the deployment of a Security Escort Vessel (SEV) to support BP Marine Global Service. This mission involved escorting the MT Saphina, a vessel carrying 20 metric tons (MT) of Automotive Gas Oil (AGO) into Nigerian waters.
+
+    The operation demonstrates our growing capacity in maritime logistics and security, offering clients reliable and compliant solutions for protecting high-value cargo. From risk mitigation strategies to real-time monitoring, our marine escort service ensures that cargo reaches its destination safely and efficiently.
+
+    As we continue to broaden our service offerings, Mitsab remains committed to delivering excellence, safety, and operational integrity across all sectors — land or sea.
+  `,
+  date: new Date("August 2, 2025"),
+  likeCount: 10,
+  commentCount: 0,
+  tags: ["MarineLogistics", "EscortServices", "SecurityAtSea"],
+  poster: {
+    name: "Mitsab Admin",
   },
+},
+
+  
+  
   {
-      title:"Innovative Technologies Transforming the Construction Industry",
-      image:storage_tank_base,
-      category:"Innovations",
-      content:`
-      The construction industry is undergoing a revolution, thanks to the advent of 
-      innovative technologies. These advancements are making construction projects 
-      more efficient, cost-effective, and sustainable. In this blog post, we'll 
-      explore some of the most exciting technologies transforming the way we build 
-      and how our company is leveraging them to deliver superior results.
-      `,
-      date:new Date("July 20, 2023"),
-      likeCount:198,
-      commentCount:121,
-      tags:["CommEdu","CommunityEngagement","EduCommunity"],
-      poster:{
-          name:"Abisola",
-      },
+  title: "Maximizing Uptime: Expert CAT Engine Maintenance Services",
+  image: cat2,
+  images: [cat1, cat2, cat4],
+  category: "Equipment & Services",
+  content: `
+    At Mitsab Resources Global Limited, we specialize in maintaining the heart of your heavy-duty equipment — CAT engines. Our certified technicians deliver thorough diagnostics, timely repairs, and expert servicing to ensure your engines operate at peak performance.
+
+    Our team offers complete maintenance solutions, from routine oil changes to full system overhauls, using only genuine CAT parts. With a proactive maintenance strategy, we help minimize equipment downtime, reduce repair costs, and improve fuel efficiency — keeping your projects running smoothly and on schedule.
+  `,
+  date: new Date("August 1, 2025"),
+  likeCount: 27,
+  commentCount: 3,
+  tags: ["EquipmentCare", "CATService", "OperationalEfficiency"],
+  poster: {
+    name: "Johnson",
   },
+}
+
+  
   
 ];
 
@@ -1319,10 +1356,10 @@ export const footer = [
           {name:"Home",id:'header'},
           {name:"About Us",id:'about'},
           {name:"Services",id:'services'},
-          {name:"Team",id:'team'},
+          
           {name:"Project",id:'project'},
-          {name:"Testimonial",id:'testimonial'},
-          {name:"Blog",id:'blog'},
+          
+          {name:"Newsroom",id:'blog'},
         ]
       },
 ]

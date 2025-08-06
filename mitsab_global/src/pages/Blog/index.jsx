@@ -1,13 +1,13 @@
 import React,{useRef} from 'react'
 import "./Blog.css"
 import { Link } from 'react-router-dom'
-import { blogs } from '../../../data'
+import { blogs } from '../../data'
 import { BsCalendar, BsCalendar2Date } from 'react-icons/bs'
 import { MdOutlineThumbUpOffAlt } from 'react-icons/md'
 import { FaRegCommentDots } from 'react-icons/fa6'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { slugify } from '../../../utils/slugify';
+import { slugify } from '../../utils/slugify';
 import ScrollTrigger from 'gsap/ScrollTrigger'; 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -30,7 +30,7 @@
 }
 #about .container .para{
     text-align: justify;
-    text-justify: inter-word;
+  font-weight: 700;
 }
 #about .group{
     display: grid;
@@ -80,6 +80,12 @@
     width: 100%;
 }
 
+ #about .text_muted{
+        text-align: justify;
+        color: black;
+    
+    }
+
 @media (max-width:900px){
     #about .container{
         grid-template-columns: 100%;
@@ -88,10 +94,16 @@
         display: none;
     }
     #about .title,
-    #about .sub_title,
-    #about .description{
+    #about .sub_title{
         text-align: center;
     }
+    #about .text_muted{
+        text-align: justify;
+        font-style: italic;
+        font-weight: 700;
+        border: dashed;
+    }
+    
     #about .buttons_container{
         justify-content: center;
         gap: 10px;
@@ -110,4 +122,5 @@
         width: 90px;
         height: 90px;
     }
+   
 }

@@ -61,6 +61,7 @@
 @media (max-width:700px){
     .achievement_container{
         gap: 10px;
+        border: dashed;
     }
     .achievement_container .achievement .title{
         font-size: 30px;
@@ -78,7 +79,7 @@
     }
 }
 
-@media (max-width:400px){
+@media (max-width:600px){
     .achievement_container .achievement{
         flex-direction: column;
     }

@@ -20,7 +20,11 @@ export {default as building_8} from "./building-8.jpeg";
 
 export {default as building_10} from "./building-10.jpeg";
 export {default as blog_1} from "./blog-1.jpeg";
-
+export {default as blog} from "./blog.jpeg";
+export {default as blog1} from "./blog1.jpeg";
+export {default as blog3} from "./blog3.jpeg";
+export {default as blog4} from "./blog4.jpeg";
+export {default as blog5} from "./blog5.jpeg";
 export {default as home_image1} from "./mitsab-work3.jpeg";
 export {default as welder_Work} from "./my-images2.jpeg";
 export {default as logo} from "./logo.jpeg";
@@ -73,5 +77,9 @@ export {default as welding3} from "./welding3.jpeg";
 export {default as welding4} from "./welding4.jpeg";
 export {default as welding5} from "./welding5.jpeg";
 export {default as welding6} from "./welding6.jpeg";
-
-
+export {default as marine} from "./marine.jpeg";
+export {default as marine1} from "./marine1.jpeg";
+export {default as manpower} from "./manpower.jpeg";
+export {default as manpower1} from "./manpower1.jpeg";
+export {default as manpower2} from "./manpower2.jpeg";
+export {default as manpower3} from "./manpower3.jpeg";

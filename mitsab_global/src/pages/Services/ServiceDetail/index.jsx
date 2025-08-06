@@ -66,7 +66,7 @@ const ServiceDetail = () => {
 
             <div className="additional-info">
               <div className="additional-info-text">
-                <h4>Introduction to Our Construction Services</h4>
+                <h4>Introduction</h4>
                 <p>{service.detailsDescription1}</p>
               </div>
 
