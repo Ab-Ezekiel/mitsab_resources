@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import "./About.css"
-import { about_image, building_1, building_2, building_3, mgt2, soak_away_pit2, storage_tank_base, welding6 } from "../../assets"
+import { about_image, building_1, building_2, building_3, mgt2, mgt3, soak_away_pit2, storage_tank_base, welding6 } from "../../assets"
 import { FaCheck } from 'react-icons/fa6'
 import { Link } from 'react-scroll'
 import { NavLink } from 'react-router-dom'
@@ -62,7 +62,7 @@ const About = () => {
     <section id='about' ref={container}>
       <div className="container about-container">
         <div className="column company_photo">
-          <img src={mgt2} alt="Mitsab" />
+          <img src={mgt3} alt="Mitsab" />
         </div>
         <div className="column">
           <h3 className='title'>
@@ -82,13 +82,12 @@ const About = () => {
           </div>
           <div className="para">
             <p className="text_muted description">
-              MITSAB RESOURCES GLOBAL LIMITED (MIREGL) is a registered Nigerian company with RC 1667132. Established under the Companies and Allied Matters Act of 1990 on March 11, 2020, 
-              MIREGL operates as a multi-disciplinary limited liability company focused on delivering sustainable projects and high-quality services across the construction, exploration, 
-              and environmental sectors. Our operations are guided by a strong local content philosophy and a commitment to excellence in service delivery.
+              MITSAB RESOURCES GLOBAL LIMITED (MIREGL) is a registered Nigerian Company with RC 1667132. It is formed and established by the Prince Samuel John Abakam, the Group CEO/ Managing 
+              Director under the companies and Allied Matters Act 1990 on March 11, 2020. It is the fastest growing and developing company in the Oil and Gas industry.
             </p>
             <p className="text_muted description">
-              As the parent company, MIREGL oversees and manages a growing family of specialized subsidiaries — including T-SAB RESOURCES (focused on oil and gas), MITSAB Security Surveillance, 
-              and MITSAB Fire Services — all working collaboratively to extend our technical expertise and broaden our impact across key industries.
+              As the parent company, MIREGL oversees and manages a growing family of specialized subsidiaries — including T-SAB RESOURCES (focused on oil and gas), MITSAB Security Services Ltd, 
+              and De-Absareal Global Ltd (specialized in Fire Equipment Maintenance and Services) — all working collaboratively to extend our technical expertise and broaden our impact across key industries.
             </p>
             <p className="text_muted description">
               Over the years, MIREGL has built a solid reputation for excellence by executing challenging projects and providing innovative design-build solutions, project management services, 
