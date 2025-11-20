@@ -63,7 +63,9 @@ const Footer = () => {
         <div className="container">
           <h3>Copyright &copy; 2025 | All Rights Reserved</h3>
           <p className="text_muted">Developed with precision and care by Manful Technologies</p>
-          
+
+          {/* DUNS Seal will appear here */}
+          <div id="DunsRegisteredSeal"></div>
         </div>
         
       </div>
