@@ -1264,7 +1264,7 @@ export const blogs = [
         and maintaining strong client partnerships drive exceptional performance across 
         all levels of our organization.
       `,
-      date:new Date("January 10, 2024"),
+      date:new Date("July 2025"),
       likeCount:34,
       commentCount:4,
       tags:["Edu4CommDev","CommGrowthEdu","EducateCommunities"],

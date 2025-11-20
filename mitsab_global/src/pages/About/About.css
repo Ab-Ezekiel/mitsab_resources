@@ -99,9 +99,9 @@
     }
     #about .text_muted{
         text-align: justify;
-        font-style: italic;
+        
         font-weight: 700;
-        border: dashed;
+        
     }
     
     #about .buttons_container{

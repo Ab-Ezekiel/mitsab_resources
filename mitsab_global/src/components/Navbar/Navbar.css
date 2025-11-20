@@ -158,19 +158,11 @@
 
 /* Responsive code */
 @media (max-width: 1400px){
-    .navbar .nav_tabs{
-        
-       
+    .navbar .nav_tabs{ 
     margin-left: -1rem;
-    
-
-
-
 
     }
     .navbar .nav_tab{
-       
-       
         width: 8rem;
     }
     .navbar .nav_tabs .tab{

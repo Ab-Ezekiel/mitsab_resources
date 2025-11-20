@@ -52,7 +52,7 @@
     flex: 1; /* Makes columns equal width */
    
 }
-#header .container .row .left_column {
+#header .container .row .right_column {
     flex: 1; /* Makes columns equal width */
    
 }
@@ -109,7 +109,7 @@
   
 }
 @media (max-width:1040px){
-    #header .left_column{
+    #header .right_column{
         display: none;
     }
     #header .container *{
